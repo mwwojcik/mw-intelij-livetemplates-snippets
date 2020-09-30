@@ -1,0 +1,18 @@
+<idea-plugin>
+    <id>mw.mw-intelij-livetemplates-snippets</id>
+    <name>MW - Live Templates code snippets</name>
+    <vendor email="mw.wojcik@gmail.com" url="http://github.com/mwwwojcik">mw</vendor>
+
+    <description><![CDATA[
+    Generates simple ADR Site<br>
+    ]]></description>
+    <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <liveTemplateMacro implementation="mw.livetemplate.TitleCaseMacro"/>
+  </extensions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <liveTemplateMacro implementation="mw.livetemplate.pfrom.FromMethodMacro"/>
+    </extensions>
+</idea-plugin>
