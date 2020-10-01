@@ -1,11 +1,8 @@
 package mw.livetemplate.returnfrom;
 
-import com.intellij.codeInsight.template.Expression;
-import com.intellij.codeInsight.template.ExpressionContext;
-import com.intellij.codeInsight.template.Result;
-import com.intellij.codeInsight.template.TemplateContextType;
-import com.intellij.codeInsight.template.TextResult;
+import com.intellij.codeInsight.template.*;
 import com.intellij.codeInsight.template.macro.MacroBase;
+import com.intellij.codeInsight.template.macro.MacroUtil;
 import com.intellij.lang.jvm.JvmParameter;
 import com.intellij.psi.PsiMethod;
 import com.intellij.psi.impl.source.PsiParameterImpl;
@@ -39,6 +36,7 @@ class ReturnFromMacro extends MacroBase {
     @Override
     protected Result calculateResult(@NotNull Expression[] params, ExpressionContext context, boolean quick) {
         var text = "hello";
+
 
         var parent = context.getPsiElementAtStartOffset().getParent().getParent();
 
