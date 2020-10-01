@@ -4,9 +4,10 @@
     <vendor email="mw.wojcik@gmail.com" url="http://github.com/mwwwojcik">mw</vendor>
 
     <description><![CDATA[
-    Generates simple ADR Site<br>
+    Generates Live Templates Snippets<br>
     ]]></description>
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
 
   <extensions defaultExtensionNs="com.intellij">
     <liveTemplateMacro implementation="mw.livetemplate.TitleCaseMacro"/>
