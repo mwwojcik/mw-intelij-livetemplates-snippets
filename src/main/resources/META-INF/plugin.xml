@@ -16,4 +16,8 @@
     <extensions defaultExtensionNs="com.intellij">
         <liveTemplateMacro implementation="mw.livetemplate.pfrom.FromMethodMacro"/>
     </extensions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <liveTemplateMacro implementation="mw.livetemplate.returnfrom.ReturnFromMacro"/>
+  </extensions>
 </idea-plugin>

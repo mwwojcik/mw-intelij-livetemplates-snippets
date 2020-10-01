@@ -1,0 +1,3 @@
+ return TYPENAME.from(
+        PARAMETERS
+    );
