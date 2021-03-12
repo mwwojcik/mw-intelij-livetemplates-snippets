@@ -8,6 +8,7 @@ import com.intellij.codeInsight.template.TextResult;
 import com.intellij.codeInsight.template.macro.MacroBase;
 import com.intellij.lang.jvm.JvmParameter;
 import com.intellij.psi.PsiClass;
+import com.intellij.psi.PsiField;
 import com.intellij.psi.impl.source.PsiParameterImpl;
 import java.io.IOException;
 import java.io.InputStream;
@@ -68,7 +69,7 @@ class FromMethodMacro extends MacroBase {
 
         var builder = new FromMethodBuilder().withClassName(className);
 
-        for (JvmParameter parameter : parameters) {
+        for (PsiField parameter : current.getFields()) {
             builder.withParam(Param.from(parameter.getName(),((PsiParameterImpl) parameter).getTypeElement().getType().getCanonicalText()));
         }
 
