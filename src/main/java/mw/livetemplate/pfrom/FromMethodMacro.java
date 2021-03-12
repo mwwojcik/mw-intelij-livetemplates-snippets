@@ -52,20 +52,6 @@ class FromMethodMacro extends MacroBase {
             return new TextResult("");
         }
 
-        var constructors = current.getConstructors();
-
-        if (constructors == null || constructors.length == 0) {
-            return new TextResult("");
-        }
-
-        var constructor = constructors[0];
-
-        var parameters = constructor.getParameters();
-
-        if (parameters == null || parameters.length == 0) {
-            return new TextResult("");
-        }
-
         var className = current.getName();
 
         var builder = new FromMethodBuilder().withClassName(className);
